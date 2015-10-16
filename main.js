@@ -53,8 +53,23 @@ var Arr = GBPArr.map(function(obj) {
 //4.  Display a list of all items made of wood - the element is "materials"
 
 
+var matArr = items.map(function (obj) {
+	return {
+		title: obj.title,
+		materials: obj.materials
+	}
+	var woodArray = [];
 
-//5. Which items are made of 8 or more materials? "materials"
+	for (i = 0; i < matArr.length; i++) {
+		if (obj.materials[i] === "wood") {
+		woodArray.push(matArr[i]);
+	}
+	}
+});
+
+console.log(matArr);
+
+//5. Which items are made of 8 or more materials? "materials" //
 
 
 //6. How many items were made by their sellers?  who_made = "i_did"

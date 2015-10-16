@@ -1,1 +1,111 @@
+#wrapper {
+	margin: 0 auto;
+	padding: 0px;
+	width: 900px;
+	height: 900px;
+	font-family: "Georgia";
+	background-color: #eeeeee;
+}
 
+#header {
+	width: 900px;
+	height: 40px;
+	background-color: white;
+	padding: 0px;
+	margin: 0 auto;
+	background-color: #ffffff;
+}
+
+h4 {
+	text-align: left;
+	padding-left: 40px;
+	font-family: "Tahoma", "sans-serif";
+}
+
+#banner {
+	width: 900px;
+	height: 106px;
+	padding: 0px;
+	margin: 0px;
+	display: block;
+	clear: both;
+}
+
+#banner img {
+	width: 900px;
+	height: 106px;
+}
+
+#questionArea {
+	background-color: #eeeeee;
+	color: #555555;
+	width: 900px;
+	height: 750px;
+	padding: 0px;
+	margin: 20px 0px 0px 0px;
+}
+
+
+.qa {
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+	font-color: #e5e5e5;
+
+}
+
+.qaMore {
+	font-size: 12px;
+}
+
+#question1 {
+	width: 900px;
+	height:125px;
+	display: block;
+	text-align: center;
+}
+
+#question2 {
+	width: 900px;
+	height:125px;
+	display: block;
+	text-align: center;
+}
+
+#question3 {
+	width: 900px;
+	height: 125px;
+	display: block;
+	text-align: center;
+}
+
+#question4 {
+	width: 900px;
+	height: 125px;
+	display: block;
+	text-align: center;
+}
+
+#question5 {
+	width: 900px;
+	height: 125px;
+	display: block;
+	text-align: center;
+}
+
+#question6 {
+	width: 900px;
+	height: 125px;
+	display: block;
+	text-align: center;
+}
+
+#footer {
+	background-color: #4b494f;
+	width: 900px;
+	height: 70px;
+	color: #ffffff;
+	font-size: 9px;
+	text-align: center;
+	font-family: "Helvetica", "sans-serif"; 
+}
