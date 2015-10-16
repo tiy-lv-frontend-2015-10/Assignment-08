@@ -81,5 +81,14 @@ var array = gbpArr.map(function(obj) {
 
 
 
+/*var matArray = items.map(function(obj) {
+	return {
+		title:obj.title,
+		materials:obj.materials
+	}
 
-console.log(array)
+
+});
+
+
+console.log(matArray); */
