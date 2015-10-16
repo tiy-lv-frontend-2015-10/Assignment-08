@@ -1,0 +1,13 @@
+*{
+	font-family: Roboto;
+}
+#etsy {
+	color: grey;
+
+}
+#header {
+	background-image: url("banner.jpg");
+	width: 1430px;
+	height: 230px;
+	background-position: center;
+}
