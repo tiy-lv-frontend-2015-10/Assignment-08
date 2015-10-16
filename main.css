@@ -100,6 +100,11 @@ h4 {
 	text-align: center;
 }
 
+.answers {
+	font-size: 10px;
+	width: 900px;
+	display: block;
+}
 #footer {
 	background-color: #4b494f;
 	width: 900px;

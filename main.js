@@ -14,7 +14,7 @@ $("#span1").html(avgPrice);
 //})
 
 
-$("#span3").html(arr);
+
 
 });
 
@@ -50,7 +50,7 @@ var newArr = priceArr.map(function(obj) {
 });
 
 newArr.forEach(function(obj) {
-	$("#span2").append(obj.title).append(obj.price);
+	$("#span2").append("<p>" + obj.title + ", $" + obj.price + "</p>");
 });
 
 //3. Which item has a GBP currency code?
@@ -87,15 +87,19 @@ arrGBP.forEach(function(obj) {
 
 var matArray = items.filter(function(item) {
 	var isWood = false;
-matArray.materials.forEach(function(materials) {
-		if (items.materials === "wood") {
+item.materials.forEach(function(material) {
+		if (material === "wood") {
 			isWood = true;
 		}
+	});
 		return isWood;
-	})
 });
 
 
+//now map it
+// var woodArray = isWood.map(function(item) {
+//
+//});
 
 
 
