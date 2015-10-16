@@ -1,5 +1,23 @@
 $(document).ready(function(){
 
+
+$("#span1").html(avgPrice);
+
+
+//$("#span2").append(newArr.foreach(function(obj)).html(obj.title, obj.price));
+
+
+//$("#add").on("click", function() {  //in this section, for each of the four type of equations, set up an event where the click calculates
+//	var num_1 = $("#num_one").val(); //the equation with the two numbers entered onto the page and then returns the answer
+//    var num_2 = $("#num_two").val();  // into the html page
+//    $("#answer").html(add(num_1, num_2));
+//})
+
+
+$("#span3").html(arr);
+
+});
+
 //1. Show me how to calculate the average price of all items.
 
 var totalPrice = items.reduce(function(a,b) {  // typeof a is equal to a number, return the value of a
@@ -31,6 +49,10 @@ var newArr = priceArr.map(function(obj) {
 	}
 });
 
+newArr.forEach(function(obj) {
+	$("#span2").append(obj.title).append(obj.price);
+});
+
 //3. Which item has a GBP currency code?
 
 
@@ -42,40 +64,78 @@ var GBPArr = items.filter(function (GBPObj) {
 	}
 });
 
-var Arr = GBPArr.map(function(obj) {
+var arrGBP = GBPArr.map(function(obj) {
 	return {
-		title: obj.title
+		title: obj.title,
+		price: obj.price
 	}
 });
 
-
+arrGBP.forEach(function(obj) {
+	$("#span3").append(obj.title).append(obj.price);
+});
 
 //4.  Display a list of all items made of wood - the element is "materials"
 
 
-var matArr = items.map(function (obj) {
-	return {
-		title: obj.title,
-		materials: obj.materials
-	}
-	var woodArray = [];
+//ar matArr = items.map(function(obj){
+//	return {
+//		title: obj.title,
+//		materials: obj.materials
+//	}
+//});
 
-	for (i = 0; i < matArr.length; i++) {
-		if (obj.materials[i] === "wood") {
-		woodArray.push(matArr[i]);
-	}
-	}
+var matArray = items.filter(function(item) {
+	var isWood = false;
+matArray.materials.forEach(function(materials) {
+		if (items.materials === "wood") {
+			isWood = true;
+		}
+		return isWood;
+	})
 });
 
-console.log(matArr);
+
+
+
+
 
 //5. Which items are made of 8 or more materials? "materials" //
 
 
+
+var moreFilter = items.filter(function(obj) {
+	if(obj.materials.length>= 8)
+	{
+		return obj.materials;
+	}
+});
+var materialsNum = moreFilter.map(function(obj) {
+	return {'title':obj.title,'materials':obj.materials,'Materials length':obj.materials.length};
+});
+
+
+materialsNum.forEach(function(obj) {
+	$("#span5").append(obj.title).append(obj.materials).append(obj.materials.length);
+});
+
 //6. How many items were made by their sellers?  who_made = "i_did"
 
-
+var whoMade = items.filter(function(obj) {
+	if (obj.who_made === "i_did") {
+		return true;
+	} else {
+		return false;
+}
 });
+var whoMadeThis = whoMade.filter(function(obj) {
+	return(whoMade.length);
+});
+
+$("#span6").append(whoMade.length + " were made by their sellers");
+
+
+/// This section gets the items into the html
 
 
 
