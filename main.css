@@ -1,0 +1,46 @@
+#top {
+	font-family: helvetica;
+	font-size: 1.5rem;
+}
+#banner {
+	width: 100%;
+	height: 250px;
+	background: url('banner.jpg') no-repeat;
+	background-position: center;
+	margin-top: -25px;
+}
+
+/*.container {
+	margin 0 auto;
+	width: 90%;
+}*/
+
+
+
+#headings h1 {
+	text-align: center;
+	font-family: "slabo 27px";
+	font-size: 2.9rem;
+}
+
+#headings p {
+	margin-top: -10px;
+	text-align: center;
+	font-family: "slabo 27px";
+	font-size: 1.2rem;
+}
+.ans {
+	margin-bottom: 180px;
+}
+
+footer {
+	width: auto;
+	height: 75px;
+	background: black;
+}
+
+footer p {
+	text-align: center;
+	padding-top: 30px;
+ color: white;
+}
