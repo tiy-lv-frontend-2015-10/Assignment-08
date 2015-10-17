@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
-$("#answer1").html(avgPrice);
+$("#answer1").append("The average price is ").append("$").append(avgPrice);
 
-
+$("h2").append("<hr />")
 
 
 
@@ -20,7 +20,7 @@ $("#answer1").html(avgPrice);
 
 var totalPrice = items.reduce(function(a, b) {                  //calculates average price
 
-	if (typeof a === "number") {
+	if (typeof a === "number") {								//used reduction to find total price
 		return a + b.price;
 	} else {
 		return a.price + b.price;
@@ -39,8 +39,8 @@ var avgPrice = (totalPrice/items.length).toFixed(2); 				///////
 
 
 priceArr = items.filter(function(btwnObj){ 						//shows items between 14-18
-	if(btwnObj.price>14 && btwnObj.price<18) {
-		return true;
+	if(btwnObj.price>14 && btwnObj.price<18) {					//used fiter then set comparison to get items between 14-18.
+		return true;											//mapped this to only keep title value.
 	} else {
 		return false;
 	}
@@ -51,12 +51,12 @@ priceArr = items.filter(function(btwnObj){ 						//shows items between 14-18
 var newArray = priceArr.map(function(obj) {
 	return {
 		title: obj.title,
-		 price: obj.price
+		
 	}
 });		
 
 newArray.forEach(function(obj){
-	$("#answer2").append("Title:").append(obj.title).append("Price:").append(obj.price);
+	$("#answer2").append(obj.title).append("<br />");
 });
 															///////
 
@@ -83,41 +83,30 @@ var array = gbpArr.map(function(obj) {
 });																	//////////
 
 array.forEach(function(obj){
-	$("#answer3").append("Title:").append(obj.title).append("Price:").append(obj.price);
+	$("#answer3").append(obj.title).append(" costs ").append("£").append(obj.price);
 });
 
 
 
-/*var matArray = items.map(function(obj) {
-	return {
-		title:obj.title,
-		materials:obj.materials
-	}
-});	
 
-var test=items.filter(function(obj){
-	for(i=0; i<matArray.length; i++) {
-	if(matArray[i]==="wood") {
-		return true;
-	} else {
-		return false
-	}
-}
-});*/
  
  var newArr = items.filter(function(item) {
- 	var isWood=false;
+ 	var isWord=false;
  	item.materials.forEach(function(material){
  		if(material === "wood") {
- 			isWood = true;
+ 			isWord = true;
  		}
  	 
  	 });
- 	return isWood;
+ 	return isWord;
  });
 
+ 
 
 
+newArr.forEach(function(obj){
+	$("#answer4").append(obj.title).append("<p></p>");
+})
 
 
 
@@ -131,12 +120,20 @@ var moreFilter= items.filter(function(obj) {				//8 or more
 });
 
 var test= moreFilter.map(function(obj){
-	 return {'title':obj.title,'materials':obj.materials,'materialLength':obj.materials.length};
+	 return {'title': obj.title,'materials': obj.materials,'materialLength':obj.materials.length};
 });
 
 test.forEach(function(obj){
-	$("#answer5").append("Title:").append(obj.title).append("Price:").append(obj.price);
-});										//
+	$("#answer5").append(obj.title).append(" has ").append(obj.materials.length).append(" materials:").append("<p></p>").append(obj.materials).append("<p></p>");
+});																//
+
+
+
+
+
+
+
+
 
 
 var sellerFilter = items.filter(function(obj){				//who_made
@@ -146,6 +143,31 @@ var sellerFilter = items.filter(function(obj){				//who_made
 		return false;
 	}
 });
+
+sellerFilter.forEach(function(obj) {
+			return sellerFilter.length;
+	});
+$("#answer6").append(sellerFilter.length+" were made by their sellers.");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
