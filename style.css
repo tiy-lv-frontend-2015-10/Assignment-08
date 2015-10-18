@@ -1,5 +1,6 @@
 body {
 	margin:0px;
+
 }
 h1 {
 	font-size: 40px;
@@ -11,6 +12,7 @@ h1 {
 	width: 100%;
 	position: relative;
 	border-top:1px solid #5C5C5C;
+	margin-bottom: 100px;
 
 }
 
@@ -18,27 +20,35 @@ h1 {
 
 
 h2 {
-	text-align: center;
-	font-size: 40px;
-	color:#5C5C5C;
-	background-color: white;
-	z-index: 1;
-
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    line-height: 0;
+    padding: 0;
+    font-size: 40px;
 }
+
+h2 span {
+    background: #fff;
+    padding: 0 15px;
+}
+
 
 .answerDiv {
 	text-align:center;
-	
+	margin-top: 50px;
+	margin-bottom: 50px;
 	color: #5C5C5C;
-	margin: auto;
+	background-color: #F7F7F7;
+	padding: 20px;
+
 }
 
 
 
 hr {
 	position:relative;
-	top:-40px;
-	z-index: 0
+	top:-30px;
+	z-index: 2;
 }
 
 #footer {

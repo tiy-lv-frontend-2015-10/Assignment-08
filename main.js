@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 $("#answer1").append("The average price is ").append("$").append(avgPrice);
 
-$("h2").append("<hr />")
+
 
 
 
