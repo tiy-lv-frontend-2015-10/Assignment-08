@@ -9,7 +9,7 @@ $(document).ready(function(){
 		
 		var avgPrice = totalPrice / items.length;
 		console.log(avgPrice.toFixed(2));
-		$("#answer1").html(avgPrice.toFixed(2));
+		$("#answer1").html("The average price is $" + avgPrice.toFixed(2));
 
 
 		var betweenItems = items.filter(function(priceObj){
@@ -31,7 +31,7 @@ $(document).ready(function(){
 			return item.title;
 		})
 		console.log(gbp)
-		$("#answer3").html(gbp);
+		$("#answer3").html(gbp + " costs £ 18");
 
 
 		
@@ -79,5 +79,5 @@ $(document).ready(function(){
 			return item;
 		})
 		console.log(madeBy.length);
-		$("#answer6").html(madeBy.length);
+		$("#answer6").html(madeBy.length + " were made by their sellers");
 });
