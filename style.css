@@ -16,6 +16,9 @@ h1 {
 
 }
 
+#answerMaster {
+	margin:80px;
+}
 
 
 
@@ -23,7 +26,6 @@ h2 {
     text-align: center;
     border-bottom: 1px solid #ddd;
     line-height: 0;
-    padding: 0;
     font-size: 40px;
 }
 
@@ -34,12 +36,13 @@ h2 span {
 
 
 .answerDiv {
-	text-align:center;
+	text-align:justify;
 	margin-top: 50px;
 	margin-bottom: 50px;
 	color: #5C5C5C;
 	background-color: #F7F7F7;
 	padding: 20px;
+	overflow: scroll;
 
 }
 

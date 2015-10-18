@@ -2,6 +2,9 @@ $(document).ready(function(){
 
 $("#answer1").append("The average price is ").append("$").append(avgPrice);
 
+var list = $('<ul />');
+
+
 
 
 
@@ -105,7 +108,7 @@ array.forEach(function(obj){
 
 
 newArr.forEach(function(obj){
-	$("#answer4").append(obj.title).append("<p></p>");
+	$("#answer4").append(obj.title).append(" is made of wood.").append("<p></p>");
 })
 
 
@@ -124,7 +127,8 @@ var test= moreFilter.map(function(obj){
 });
 
 test.forEach(function(obj){
-	$("#answer5").append(obj.title).append(" has ").append(obj.materials.length).append(" materials:").append("<p></p>").append(obj.materials).append("<p></p>");
+	$("#answer5").append(obj.title).append(" has ").append(obj.materials.length).append(" materials:").append("<p></p>").append(obj.materials).append("<p></p>")
+
 });																//
 
 
