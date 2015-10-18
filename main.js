@@ -3,18 +3,15 @@ $(document).ready(function() {
 //Show me how to calculate the average price of all items.
 // * the average price is $23.63
 
-function getTotalPrice() {
-	var totalPrice = items.reduce(function (a, b) {
-		if(typeof a === "number") {
-			return a + b.price;
-		} else {
-			return a.price + b.price;
+var avgPrice = items.reduce(function(a,b) {
+	if (typeof a === "number") {
+		return a + b.price;
+	} else {
+		return a.price + b.price;
 	}
-}
 });
 
-console.log(totalPrice / items);
-
+console.log($("#s1").html(avgPrice / items));
 
 //Show me how to get an array of items that cost between $14.00 and $18.00 USD.
 // *1970s Coors Banquet Glass Beer Pitcher
@@ -27,14 +24,13 @@ var costBetween = items.filter(function(priceObj) {
 	}
 });
 
-console.log(costBetween);
-
 
 
 
 
 // Which item has a "GBP" currency code? Display its name and price.
 // *1970s Schlitz Mal Liquor Glass Beer Pitcher cost 18 pounds.
+
 
 
 
