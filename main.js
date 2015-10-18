@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("#span1").html(averagePrice);
+  $("#span1").html('The average price is ' + averagePrice);
 });
 
 // this is for answer one
@@ -39,7 +39,7 @@ var newArr = priceArr.map(function(obj) {
 });
 
 newArr.forEach(function(obj) {
-  $("#span2").append(obj.title).append(obj.price);
+  $("#span2").append(obj.title + " </br>");
 });
 
 
@@ -70,12 +70,29 @@ gbpNewArr.forEach(function(obj) {
 
 // --- end of answer 3
 
+// this is for answer 4
+
+var newArr = items.filter(function(item) {
+  var isWood=false;
+  item.materials.forEach(function(material){
+    if(material === "wood") {
+      isWood = true;
+    }
+
+   });
+  return isWood;
+ });
+
+newArr.forEach(function(obj){
+  $("#span4").append(obj.title +  "</br>");
+})
+
 // this is for answer 5
 
 var materialLength = items.filter(function(obj) {
   return {
     title: obj.title,
-    materials: obj.materials,
+    materials: obj.materials
   }
 });
 
@@ -94,7 +111,7 @@ var materialNumbers = moreFilter.map(function(obj) {
 });
 
 materialNumbers.forEach(function(obj) {
-$("#span5").append(obj.title).append(obj.materials.length).append(obj.materials);
+$("#span5").append(obj.title).append("</br>").append("</br>" + "<li>" + obj.materials + "." + "</li>" + "</br>" );
 });
 
 // end of answer 5
