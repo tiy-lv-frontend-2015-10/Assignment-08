@@ -17,7 +17,7 @@ h1 {
 }
 
 #answerMaster {
-	margin:80px;
+	margin:50px;
 }
 
 
@@ -70,4 +70,5 @@ hr {
 	margin:auto;
 	position: relative;
 	top:100px;
+	font-size: 20px;
 }

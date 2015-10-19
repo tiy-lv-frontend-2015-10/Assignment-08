@@ -59,7 +59,7 @@ var newArray = priceArr.map(function(obj) {
 });		
 
 newArray.forEach(function(obj){
-	$("#answer2").append(obj.title).append("<br />");
+	$("#answer2").append(obj.title).append("<p></p>");
 });
 															///////
 
