@@ -1,0 +1,22 @@
+*{
+	font-family: Roboto;
+	color: grey
+}
+h1 {
+	text-align: center;
+}
+#answer1 {text-align: center;}
+#answer2 {text-align: center;}
+#answer3 {text-align: center;}
+#answer4 {text-align: center;}
+#answer5 {text-align: center;}
+#answer6 {text-align: center;}
+#etsy {
+
+}
+#header {
+	background-image: url("banner.jpg");
+	width: 1430px;
+	height: 230px;
+	background-position: center;
+}
