@@ -95,8 +95,13 @@ item.materials.forEach(function(material) {
 		return isWood;
 });
 
+matArray.forEach(function(obj) {
+	$("#span4").append("<p>" + obj.title + "</p>");
+});
 
-//now map it
+
+
+// now map it
 // var woodArray = isWood.map(function(item) {
 //
 //});
@@ -118,10 +123,14 @@ var materialsNum = moreFilter.map(function(obj) {
 	return {'title':obj.title,'materials':obj.materials,'Materials length':obj.materials.length};
 });
 
-
 materialsNum.forEach(function(obj) {
-	$("#span5").append(obj.title).append(obj.materials).append(obj.materials.length);
+	$("#span5").append("<p>" + obj.title + " - Materials:" + obj.materials + " - " + obj.materials.length + " materials total" +"</p>");
 });
+
+//materialsNum.forEach(function(obj) {
+//	$("#span5").append("<p>" + obj.title + ", " + obj.materials + ", " + obj.materials.length + "</p>");
+//});
+
 
 //6. How many items were made by their sellers?  who_made = "i_did"
 

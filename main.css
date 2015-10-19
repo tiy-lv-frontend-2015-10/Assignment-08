@@ -40,7 +40,7 @@ h4 {
 	background-color: #eeeeee;
 	color: #555555;
 	width: 900px;
-	height: 750px;
+	height: 850px;
 	padding: 0px;
 	margin: 20px 0px 0px 0px;
 }
@@ -51,46 +51,53 @@ h4 {
 	font-weight: bold;
 	text-align: center;
 	font-color: #e5e5e5;
+	font-style: bold;
 
 }
 
 .qaMore {
 	font-size: 12px;
+
 }
 
 #question1 {
 	width: 900px;
-	height:125px;
+	height:75px;
 	display: block;
 	text-align: center;
+	line-height: 1.5em;
 }
 
 #question2 {
 	width: 900px;
-	height:125px;
+	height:175px;
 	display: block;
 	text-align: center;
+	line-height: 1.5em;
 }
 
 #question3 {
 	width: 900px;
-	height: 125px;
+	height: 75px;
 	display: block;
 	text-align: center;
+	line-height: 1.5em;
 }
 
 #question4 {
 	width: 900px;
-	height: 125px;
+	height: 235px;
 	display: block;
 	text-align: center;
+	line-height: 1.5em;
 }
 
 #question5 {
 	width: 900px;
-	height: 125px;
+	height: 200px;
 	display: block;
 	text-align: center;
+	line-height: 1.5em;
 }
 
 #question6 {
@@ -98,17 +105,18 @@ h4 {
 	height: 125px;
 	display: block;
 	text-align: center;
+	line-height: 1.5em;
 }
 
 .answers {
-	font-size: 10px;
+	font-size: 14px;
 	width: 900px;
 	display: block;
 }
 #footer {
 	background-color: #4b494f;
 	width: 900px;
-	height: 70px;
+	height: 80px;
 	color: #ffffff;
 	font-size: 9px;
 	text-align: center;
