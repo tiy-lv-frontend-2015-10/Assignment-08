@@ -127,9 +127,10 @@ var test= moreFilter.map(function(obj){
 });
 
 test.forEach(function(obj){
-	$("#answer5").append(obj.title).append(" has ").append(obj.materials.length).append(" materials:").append("<p></p>").append(obj.materials).append("<p></p>")
+	$("#answer5").append(obj.title).append(" has ").append(obj.materials.length).append(" materials:").append("<p></p>").append(obj.materials + "<br/>").append("<p></p>")
 
 });																//
+
 
 
 

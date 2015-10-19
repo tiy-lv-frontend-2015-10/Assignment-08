@@ -27,6 +27,7 @@ h2 {
     border-bottom: 1px solid #ddd;
     line-height: 0;
     font-size: 40px;
+    color:#5C5C5C;
 }
 
 h2 span {
@@ -44,6 +45,7 @@ h2 span {
 	padding: 20px;
 	overflow: scroll;
 
+
 }
 
 
@@ -58,6 +60,14 @@ hr {
 	height: 200px;
 	width: 100%;
 	background-color: #5C5C5C;
+	position: relative;
+	top:100px;
+}
+
+#footer p {
+	text-align: center;
+	color:#D3D3D3;
+	margin:auto;
 	position: relative;
 	top:100px;
 }
