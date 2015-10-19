@@ -1,0 +1,46 @@
+.etsy {
+	font-family: helvetica;
+	font-size: 20px;
+	margin-left: 20px;
+}
+
+#banner {
+	background: url("banner.jpg") no-repeat;
+	width: 1260px;
+	height: 200px;
+	background-position: center;
+	margin: auto;
+}
+
+#container {
+	width: 1260px;
+}
+
+#Answer {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+#Answer p {
+	font-family: 'Slabo 27px', serif;
+	font-size: 50px;
+	color: #707070;
+}
+
+#Answer span {
+	font-family: 'Slabo 27px', serif;
+	font-size: 18px;
+	color: #707070;
+}
+
+footer {
+	background: #282828;
+	width: 1260px;
+	height: 100px;
+}
+
+.footer {
+	color: gray;
+	text-align: center;
+	padding-top: 65px;
+}
