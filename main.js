@@ -106,7 +106,7 @@ $(document).ready(function() {
         }
       });
 
-    sellerMade.items.filter(function(item) {
+    sellerMade.filter(function(item) {
           return item.who_made;
     });
     
