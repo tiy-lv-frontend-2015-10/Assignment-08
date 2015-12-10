@@ -1,66 +1,74 @@
-$(document).ready(function () {
+$(document).ready(function() {
     
 //1. Show me how to calculate the average price of all items.
     //Steps. .reduceLoop, convert from object, return price, shorten decimels, 
    
-    function getAvgPrice() {
-     var totalPrice = items.reduce(function (a, b) {
+    
+    var totalPrice = items.reduce(function (a, b) {
          if (typeof a === "number") {
              return a + b.price;
          } else {
              return a.price + b.price;
          }
      });
-     return (totalPrice / items.length).toFixed(2);
- };
- var answer1el = document.getElementById("answer1");
- answer1el.innerHTML = answer1el.innerHTML + getAvgPrice();
-   
+    
+   var avgPrice = totalPrice / items.length;
+        console.log(avgPrice.toFixed(2));
+        $("#answer1").html("The average price is $" + avgPrice.toFixed(2));
     
     // -----------------------------------------------------------------------------
     //2. Show me how to get an array of items that cost between $14.00 and $18.00 USD.
     //Filter 14-18 from lists.price. 
     
-    function range() {
-      var priceRange = items.filter(function (price(, items) {
-        return var listedRange = items.price <= 18 &&
-        items.price >= 14;
+    var betweenItems = items.filter(function(obj) {
+        if (obj.price > 14 && obj.price < 18) {
+            return true;
+        } else {
+            return false;
+        }
+    })
+    
+    .map(function(item){
+        return item.title;
     });
-        return (listedRange.length);
-        $("#answer2 p").html();                                     
-    };
-    var answer2elem = document.getElementById("answer2");
-    answer2elem.innerHTML = answer2elem.innerHTML + range();
     
-    
+    $("#answer2").html(betweenItems);
     
     //-----------------------------------------------------------------------
     //3. Which item has a "GBP" currency code? Display it's name and price. Find GBP and return &pound.
     // 
-    function findPound () {
-    var poundCurrency = items.filter(function (items) {
-        if (items.currency_code === "GBP") {
-         return true; 
-         } else {
-             return false;
-         }
-    })
-};
-    var answer3elem = document.getElementById("answer3");
-    answer3elem.innerHTML = answer3elem.innerHTML + findPound;
+   var gbp = items.filter(function(obj) {
+       if (obj.currency_code === "GBP") {
+           return true;
+       }
+   })
     
+   .map(function(item) {
+       return item.title;
+   })
+   
+   $("#answer3").html(gbp + "costs £ 18");
         
     //---------------------------------------------------------
     //4. Display a list of all items who are made of wood. Find WOOD from the MATERIALS PROPERTIES.
-    function findWood {
-        function searchArray.filter(items[, ])
-      if (items.materials === "wood")
-          return true;
-    } else {
-        return false;
-    };
-    findWood();
+   var woodItems = items.map(function(item) {
+       item.materials.forEach(function(material) {
+           if (material === "wood") {
+               console.log("wood");
+               return true;
+           } else {
+               return false;
+           }
+       })
+      
+   });
+       
+     woodItems.forEach(function(wood) {
+           return woodItems.wood;
+         console.log("woodItems");
+       });
     
+    $("#answer4").html(woodItems);
     
     
     
@@ -68,29 +76,41 @@ $(document).ready(function () {
           //   arr.filter(callback[, thisArg])
     //-------------------------------------------------------------------------------------
     //5. Which items are made of eight or more materials? Display the name, number of items and the items it is made of. List the new array out of property-materials > 8.
-    function numOfMaterials() {
-        var findNum = items.filter(function[items.materials];
-        if ([items].materials.length >= 8)
-            return findNum;
-    }
-    console.log(findNum);
+   var eightOrMore = items.filter(function(obj) {
+       if (obj.materials.length >= 8) {
+           console.log("8 or more");
+           return true;
+       }
+   });
+    
+    var list = eightOrMore.map(function(obj) {
+        return {
+            "title": obj.title,
+            "materials": obj.materials,
+            "materialLength": obj.materials.length
+        }
     });
-$("#answer5").html.valueOf;
     
+    list.forEach(function(obj) {
+        $("#answer5").html (obj.title + obj.materials + obj.materials.length);
+        
+    });
     
-    
-    
+
     //-------------------------------------------------------------------------------------
     //6. How many items were made by their sellers? Find/return to html who_made = "i_did"
-   function whoMadeIt() {
-       var whoMade = items.filter(function[lists.who_made, ])
-        if(whoMade === "i_did") {
-            console.log = (whoMade);
-        }  else {
-            return false;
-        });                          
-   };
-   //$("#answer6").html.getAttribute("whoMade");
+  var sellerMade = items.map(function(obj) {
+      if (obj.who_made === "i_did") {
+          console.log("seller made");
+          return true;
+        }
+      });
+
+    sellerMade.items.filter(function(item) {
+          return item.who_made;
+    });
+    
+   $("#answer6").html(sellerMade);
 
 
 });//CLOSES DOCUMENT READY
