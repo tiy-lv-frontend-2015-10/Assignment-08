@@ -51,24 +51,20 @@ $(document).ready(function() {
         
     //---------------------------------------------------------
     //4. Display a list of all items who are made of wood. Find WOOD from the MATERIALS PROPERTIES.
-   var woodItems = items.map(function(item) {
-       item.materials.forEach(function(material) {
-           if (material === "wood") {
-               console.log("wood");
-               return true;
-           } else {
-               return false;
-           }
-       })
-      
-   });
+   // var woodItems = items.map(function(woodMaterial) {
+   //    if (.materials === "wood") {
+   //      return woodMaterial.wood;
+   //    } else {
+   //      return false;
+   //    }
+   // });
        
-     woodItems.forEach(function(wood) {
-           return woodItems.wood;
-         console.log("woodItems");
-       });
+   //   woodItems.forEach(function(woodStuff) {
+   //         return woodStuff.woodItems;
+   //       console.log("woodItems");
+   //     });
     
-    $("#answer4").html(woodItems);
+   //  $("#answer4").html(woodItems);
     
     
     
@@ -99,18 +95,18 @@ $(document).ready(function() {
 
     //-------------------------------------------------------------------------------------
     //6. How many items were made by their sellers? Find/return to html who_made = "i_did"
-  var sellerMade = items.map(function(obj) {
-      if (obj.who_made === "i_did") {
-          console.log("seller made");
-          return true;
-        }
-      });
+  // var sellerMade = items.map(function(obj) {
+  //     if (obj.who_made === "i_did") {
+  //         console.log("seller made");
+  //         return true;
+  //       }
+  //     });
 
-    sellerMade.filter(function(item) {
-          return item.who_made;
-    });
+  //   sellerMade.filter(function(item) {
+  //         return item.who_made;
+  //   });
     
-   $("#answer6").html(sellerMade);
+  //  $("#answer6").html(sellerMade);
 
 
 });//CLOSES DOCUMENT READY
