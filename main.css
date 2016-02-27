@@ -1,0 +1,33 @@
+#container {
+    margin: 0;
+}
+h1 {}
+h2 {
+    text-align: center;
+}
+p {
+    text-align: center;
+}
+
+.banner {
+    margin: auto;
+    width: 100%;
+}
+
+.pad {
+    padding: 1em;
+}
+
+#answers1 {}
+#answers2 {}
+#answers3 {}
+#answers4 {}
+#answers4 {}
+#answers5 {}
+#answers6 {}
+
+div #footer {
+    color: white;
+    background-color: rgb(75, 73, 70);
+    text-align: center;
+}
